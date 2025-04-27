@@ -91,3 +91,48 @@ button:hover {
 .delete-btn:hover {
     color: #ff0000;
 }
+/* Pozicioniranje ikonice */
+#userIcon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Forma login/signup */
+#authForms {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: rgba(0,0,0,0.8);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 999;
+    width: 250px;
+}
+
+#authForms form {
+    display: flex;
+    flex-direction: column;
+}
+
+#authForms input, #authForms button {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#authForms button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#authForms h2, #authFroms p{
+    color: white;
+    text-align: center;
+}
