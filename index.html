@@ -10,10 +10,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+
     <div class="container">
         <header>
             <h1>Digitalni dnevnik sa podsetnicima</h1>
         </header>
+        <!-- Forma za registraciju -->
+<!-- Samo korisnička ikona -->
+<div id="userIcon">
+    <i class="fas fa-user"></i>
+</div>
+
+<!-- Prazno mesto gde će JavaScript ubacivati forme -->
+<div id="authForms" style="display: none;"></div>
+
+
+<!-- Skrivena forma za prijavu i registraciju -->
+<div id="authForms" style="display: none;">
+    <form id="loginForm">
+        <h2>Prijava</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Lozinka" required>
+        <button type="submit">Prijavi se</button>
+    </form>
+
+    <form id="signUpForm">
+        <h2>Registracija</h2>
+        <input type="email" id="signUpEmail" placeholder="Email" required>
+        <input type="password" id="signUpPassword" placeholder="Lozinka" required>
+        <button type="submit">Registruj se</button>
+    </form>
+</div>
+
+
+
+
 
         <!-- Forma za unos podsetnika -->
         <section class="unos-podsetnik">
