@@ -1,69 +1,51 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Digitalni dnevnik</title>
-    <!-- Link do CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome za ikone (opciono) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podsetnici</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Digitalni dnevnik sa podsetnicima</h1>
-        </header>
-        <!-- Forma za registraciju -->
-<!-- Samo korisnička ikona -->
-<div id="userIcon">
-    <i class="fas fa-user"></i>
-</div>
-
-<!-- Prazno mesto gde će JavaScript ubacivati forme -->
-<div id="authForms" style="display: none;"></div>
-
-
-<!-- Skrivena forma za prijavu i registraciju -->
-<div id="authForms" style="display: none;">
-    <form id="loginForm">
-        <h2>Prijava</h2>
-        <input type="email" id="loginEmail" placeholder="Email" required>
-        <input type="password" id="loginPassword" placeholder="Lozinka" required>
-        <button type="submit">Prijavi se</button>
-    </form>
-
-    <form id="signUpForm">
-        <h2>Registracija</h2>
-        <input type="email" id="signUpEmail" placeholder="Email" required>
-        <input type="password" id="signUpPassword" placeholder="Lozinka" required>
-        <button type="submit">Registruj se</button>
-    </form>
-</div>
-
-
-
-
-
-        <!-- Forma za unos podsetnika -->
-        <section class="unos-podsetnik">
-            <h2>Dodaj novi podsetnik</h2>
-            <form id="podsetnikForm">
-                <input type="text" id="naslov" placeholder="Naslov" required />
-                <input type="datetime-local" id="vreme" required />
-                <button type="submit">Dodaj podsetnik</button>
-            </form>
-        </section>
-
-        <!-- Lista podsetnika -->
-        <section class="lista-podsetnika">
-            <h2>Moji podsetnici</h2>
-            <ul id="lista"></ul>
-        </section>
+<nav class="navbar">
+    <div class="logo">Podsetnici</div>
+    <button id="signInButton">
+      <i class="fas fa-user"></i> Sign in
+    </button>
+  </nav>
+  
+<div id="authPopup" class="popup hidden">
+    <div class="popup-content">
+      <span id="closePopup">&times;</span>
+      <h2 id="formTitle">Prijava</h2>
+      <input type="text" id="username" placeholder="Korisničko ime">
+      <input type="password" id="password" placeholder="Lozinka">
+      <button id="submitAuth">Prijavi se</button>
+      <p class="toggleForm">Nemate nalog? <span id="switchForm">Registrujte se</span></p>
     </div>
+  </div>
+  
 
-    <!-- Link do JS -->
+
+  <main class="container">
+    <h1>Dodaj Podsetnik</h1>
+
+    <form id="reminderForm">
+      <input type="text" id="naslov" placeholder="Naslov podsetnika" required>
+      <input type="date" id="datum" required>
+      <input type="time" id="vreme" required>
+      <button type="submit">Sačuvaj</button>
+    </form>
+
+    <section id="remindersList"></section>
+  </main>
+
+  <script src="js.js"></script>
+</body>
+</html>v>
+
     <script src="js.js"></script>
 </body>
 </html>
