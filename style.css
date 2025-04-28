@@ -1,138 +1,175 @@
-/* Osnovni stilovi i background slika */
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('assets/background.JPG');
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1526404428533-4c12b8c2b3a5?auto=format&fit=crop&w=1740&q=80');
     background-size: cover;
     background-position: center;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-    width: 90%;
-}
-
-header h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-h2 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Forma */
-form {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-input[type="text"],
-input[type="datetime-local"] {
-    flex: 1;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 1em;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
+    background-attachment: fixed;
     color: white;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Lista podsetnika */
-#lista {
-    list-style: none;
-    padding: 0;
-}
-
-#lista li {
-    background-color: rgba(255, 255, 255, 0.2);
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
+  }
+  
+  .navbar {
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-/* Ikone za brisanje */
-.delete-btn {
-    background: none;
-    border: none;
-    color: #ff4d4d;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-.delete-btn:hover {
-    color: #ff0000;
-}
-/* Pozicioniranje ikonice */
-#userIcon {
+    padding: 0 20px;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #signInButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #signInButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  #signInButton i {
+    font-size: 20px;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  }
+  
+  #closePopup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
     color: white;
     cursor: pointer;
-    z-index: 1000;
-}
+  }
+  
+  .popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+  }
+  
+  #submitAuth {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .toggleForm {
+    color: white;
+    margin-top: 15px;
+  }
+  
+  .toggleForm span {
+    color: #4caf50;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
 
-/* Forma login/signup */
-#authForms {
-    position: fixed;
-    top: 70px;
-    right: 20px;
-    background-color: rgba(0,0,0,0.8);
+  .hidden {
+    display: none;
+  }
+  
+  .container {
+    margin-top: 120px;
     padding: 20px;
-    border-radius: 10px;
-    z-index: 999;
-    width: 250px;
-}
-
-#authForms form {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-}
-
-#authForms input, #authForms button {
-    margin: 8px 0;
+    gap: 15px;
+  }
+  
+  form input, form button {
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     border: none;
-}
-
-#authForms button {
+  }
+  
+  form button {
     background-color: #4CAF50;
     color: white;
+    font-size: 18px;
     cursor: pointer;
-}
-
-#authForms h2, #authFroms p{
-    color: white;
-    text-align: center;
-}
+  }
+  
+ 
+  #remindersList {
+    margin-top: 30px;
+  }
+  
+  .reminder {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .reminder h3, .reminder p {
+    margin-bottom: 5px;
+  }
